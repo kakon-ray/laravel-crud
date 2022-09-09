@@ -9,4 +9,6 @@ Route::get('/', [SiteController::class, 'Home']);
 Route::get('/add-data',[SiteController::class, 'addData']);
 
 Route::post('/store-data',[SiteController::class, 'storeData']);
+Route::get('/edit-data/{id}',[SiteController::class, 'editData']);
+Route::post('/update-data/{id}',[SiteController::class, 'updateDate']);
 

@@ -21,13 +21,14 @@
       <th scope="row">{{$key+1}}</th>
       <td>{{$data->name}}</td>
       <td>{{$data->email}}</td>
-      <td><button class="btn btn-success mx-3">Update</button><button class="btn btn-danger">Delete</button></td>
+      <td><a class="btn btn-success mx-3" href="{{url('/edit-data/'.$data->id)}}">Update</a><a class="btn btn-danger">Delete</a></td>
       
     </tr>
 @endforeach
 
   </tbody>
 </table>
+<!-- its a table pagination -->
 {{$showData -> links()}}
   </div>
 @endsection()
