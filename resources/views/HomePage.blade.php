@@ -21,7 +21,8 @@
       <th scope="row">{{$key+1}}</th>
       <td>{{$data->name}}</td>
       <td>{{$data->email}}</td>
-      <td><a class="btn btn-success mx-3" href="{{url('/edit-data/'.$data->id)}}">Update</a><a class="btn btn-danger">Delete</a></td>
+      <td><a class="btn btn-success mx-3" href="{{url('/edit-data/'.$data->id)}}">Update</a>
+      <a class="btn btn-danger" href="{{url('/delete-data/'.$data->id)}}" onclick="return confirm('Are you Delete this item')">Delete</a></td>
       
     </tr>
 @endforeach

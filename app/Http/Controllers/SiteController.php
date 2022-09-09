@@ -69,5 +69,13 @@ class SiteController extends Controller
         return redirect('/');
     }
 
+    function deleteData($id = null){
+        $deleteData = Crud::find($id);
+        $deleteData->delete();
+        Session::flash('msg','Data SUccessfully Deleted');
+        return redirect('/');
+
+    }
+
    
 }
